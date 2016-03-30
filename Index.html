@@ -1,0 +1,27 @@
+<!--
+ *
+ * Cytonn Technologies
+ * @author Ndirangu Wilson <wndirangu@cytonn.com>
+ * AngularJS introduction
+ *
+-->
+<!DOCTYPE html>
+<html ng-app="YahooCurrencies">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--- Declaring a controller to retrieve data from the Yahoo API--->
+    <div ng-controller="retrieveCurrenciesController">
+       <button type="button" ng-click="getItems()">Get Items</button>
+       <ul>
+          <li ng-repeat="item in items"> item.firstName </li>
+       </ul>
+
+
+       <script src="./lib/angular.min.js"></script>
+        <script src="./js/functions.js"></script>
+   </div>
+  </body>
+</html>
