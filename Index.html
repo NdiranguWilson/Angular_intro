@@ -6,18 +6,29 @@
  *
 -->
 <!DOCTYPE html>
-<html ng-app="YahooCurrencies">
+<html ng-app="NetflixMovies">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <title>Search Netflix Movies</title>
   </head>
   <body>
-    <!--- Declaring a controller to retrieve data from the Yahoo API--->
-    <div ng-controller="retrieveCurrenciesController">
-       <button type="button" ng-click="getItems()">Get Items</button>
-       <ul>
-          <li ng-repeat="item in items"> item.firstName </li>
-       </ul>
+    <!--- Declaring a controller to retrieve data from the Netflix  API--->
+    <div class="col-md-6" row ng-controller="retrieveMovieController as movie">
+      <form class=" form-group" ng-submit="getItems()">
+      <input class="form-control" type="text" ng-model="movie.moviename"/>
+        You typed {{movie.username}}
+        <input type="submit" value="Submit">
+      </form>
+
+    <div class=" col-md-6 row ">
+  <p ng-repeat="item in items"> {{item}} </p>
+    </div>
+
+
 
 
        <script src="./lib/angular.min.js"></script>
