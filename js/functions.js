@@ -8,10 +8,14 @@ var app = angular.module('NetflixMovies', []);
 
 app.controller('retrieveMovieController', ['$scope', '$http', function($scope, $http) {
   $scope.items = [];
+  $scope.keys = [];
   var self = this;
 
   var Moviename = String(self.moviename);
-
+  /**
+   * [getItems retrieves the information about a movie tha is searched]
+   *
+   */
   $scope.getItems = function() {
     var split_string = self.moviename.split(" ");
     length = split_string.length;
@@ -27,6 +31,7 @@ app.controller('retrieveMovieController', ['$scope', '$http', function($scope, $
         $scope.items = data;
 
         console.log(split_string[0]);
+        $scope.keys = Object.keys(data);
 
 
       })

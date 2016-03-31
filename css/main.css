@@ -1,0 +1,56 @@
+/**
+ * Cytonn Technologies
+ * @author Ndirangu Wilson <wndirangu@cytonn.com>
+ *
+ */
+
+ @font-face {
+   font-family: 'Graublau Web';
+   src: url('GraublauWeb.eot');
+   src: local('Graublau Web Regular'), local('Graublau Web'),
+     url("GraublauWeb.woff") format("woff"),
+     url("GraublauWeb.otf") format("opentype"),
+     url("GraublauWeb.svg#grablau") format("svg");
+ }
+body{
+font-family: "Graublau Web";
+  background: #B9090B;
+  color: #000000;
+}
+
+.center{
+
+  padding-top:10% ;
+  margin-left: 60%;
+  width: 70%;
+
+}
+.row{
+  font-size: 30px;
+  padding: 22%;
+
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+h3{
+  padding:40px;
+  text-align: center;
+  font-size: 50px;
+  font-style: italic;
+}
+.search{
+	background-color:#ed8223;
+	color:#fff;
+	font-family:'Helvetica Neue',sans-serif;
+	font-size:18px;
+	line-height:30px;
+	border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border:0;
+	text-shadow:#C17C3A 0 -1px 0;
+	width:120px;
+	height:32px
+}
